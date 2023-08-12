@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+        }
+        .container{
+            width: 90%;
+            max-width: 600px;
+            /* background: #fff; */
+            padding: 50px;
+            border-radius: 10px;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            height: 180px;
+            
+        }
+        #clock{
+            width: 100%;
+            height: 100%;
+            background: rgba(235,0,255,0.11);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+
+        }
+        #clock::before{
+            content: '';
+            width: 180px;
+            height: 180px;
+            background: #f41b75;
+            border-radius: 5px;
+            position: absolute;
+            left: -50px;
+            top: -50px;
+            z-index: -1;
+        }
+        #clock::after{
+            content: '';
+            width: 180px;
+            height: 180px;
+            background: #419aff;
+            border-radius: 50%;
+            position: absolute;
+            right: -30px;
+            bottom: -30px;
+            z-index: -1;
+            
+        }
+        @media screen and (max-width: 992px) {
+            #clock::before{
+                height: 120px;
+                width: 120px;
+                position: absolute;
+                left: -5px;
+                top: -5px;
+            }
+            #clock::after{
+                height: 120px;
+                width: 120px;
+                position: absolute;
+                right: -10px;
+                bottom: -10px;
+            }
+            .container{
+                width: 70%;
+                font-size: 30px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .container{
+                width: 70%;
+                font-size: 10px;
+            }
+            #clock::before{
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+            }
+            #clock::after{
+                height: 120px;
+                width: 120px;
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="clock">
+            <h1>00:00:00</h1>
+        </div>
+    </div>
+    <script>
+        // Calling showTime function at every second
+        setInterval(showTime, 1000);
+ 
+        // Defining showTime funcion
+        function showTime() {
+            // Getting current time and date
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+  
+            // Setting time for 12 Hrs format
+            if (hour >= 12) {
+                if (hour > 12) hour -= 12;
+                    am_pm = "PM";
+                } else if (hour == 0) {
+                    hr = 12;
+                    am_pm = "AM";
+                }
+  
+                hour =
+            hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+  
+            let currentTime =
+            hour +":" +min +":" +sec +am_pm;
+  
+        document.getElementById("clock").innerHTML = currentTime;
+        }
+  
+        showTime();
+    </script>
+</body>
+</html>
