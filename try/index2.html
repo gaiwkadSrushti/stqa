@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #collegeForm {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="collegeForm">
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" required>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" required>
+
+        <input type="radio" id="acceptPolicy" name="policy" required>
+        <label for="acceptPolicy">I accept the policy</label>
+        <a href="index.html">Pervious</a>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

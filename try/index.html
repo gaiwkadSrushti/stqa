@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    /* CSS styles for form layout */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form id="registration-form" action="index2.html">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" required maxlength="20">
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" required maxlength="20">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" required maxlength="20">
+
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" required>
+
+    <label for="mobile-country-code">Mobile Country Code:</label>
+    <select id="mobile-country-code">
+      <option value="91">+91 (India)</option>
+      <!-- Add more country codes if needed -->
+    </select>
+
+    <label for="mobile-number">Mobile Number:</label>
+    <input type="text" id="mobile-number" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required minlength="8">
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" required minlength="8">
+    
+    <input type="submit" id="next-button" value="Next">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
