@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Information</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <div class="main-div">
+    <div class="inner-div">
+      <h2>Registration</h2>
+      <form class="form">
+        <div>
+          <label for="firstname" class="input-label">First Name:</label>
+          <input type="text" name="firstname" required>
+        </div>
+        <div>
+          <label for="lastname" class="input-label">Last Name:</label>
+          <input type="text" name="lastname" required>
+        </div>
+        <div>
+          <label for="email" class="input-label">Email ID:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+          <label for="phone" class="input-label">Mobile No:</label>
+          <div class="phone">
+            <select name="phone" id="mobile">
+                <option value="39">Holy See (Vatican City State) +39</option>
+                <option value="504">Honduras +504</option>
+                <option value="852">Hong Kong +852</option>
+                <option value="36">Hungary +36</option>
+                <option value="354">Iceland +354</option>
+                <option value="91">India +91</option>
+                <option value="62">Indonesia +62</option>
+                <option value="98">Iran, Islamic Republic of +98</option>
+                <option value="964">Iraq +964</option>
+                <option value="353">Ireland +353</option>
+            </select>
+            <input type="tel" maxlength="10" name="phone" id="phone" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="input-label">Password:</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+          <label for="confirm-password" class="input-label">Confirm Password:</label>
+          <input type="password" name="confirm-password" id="Confirm-password" required>
+        </div>
+        <button type="submit" class="submit">Next</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
